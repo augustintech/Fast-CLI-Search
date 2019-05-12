@@ -1,4 +1,4 @@
-# Version: Python3
+# Version: Python 3.7.3
 import requests
 import json
 
@@ -22,6 +22,5 @@ R = S.get(url=URL, params=PARAMS)
 DATA = R.json()
 
 for i in range(10):
-    print(DATA['query']
-['search'][i]['title'])
+    print(DATA['query']['search'][i]['title'])
 
