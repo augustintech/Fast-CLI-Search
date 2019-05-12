@@ -1,3 +1,5 @@
+import requests
+
 # Version: Python3
 
 findme = input("Enter a name to get their DOB: ")
