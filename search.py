@@ -1,9 +1,10 @@
 # Version: Python 3.7.3
 import requests
 import json
+import re
 
 findme = input("Enter a name to get their DOB: ")
-print("Currently searching for",findme)
+print("Currently searching for",findme,"...")
 
 S = requests.Session()
 
@@ -24,3 +25,25 @@ DATA = R.json()
 for i in range(10):
     print(DATA['query']['search'][i]['title'])
 
+# Prompts user to choose for the correct article. 
+
+findme = input("Choose the correct article: ")
+print("Currently fetching article for",findme,"...")
+
+TITLE = findme
+
+PARAMS = {
+    'action': "parse",
+    'page': TITLE,
+    'format': "json"
+}
+
+R = S.get(url=URL, params=PARAMS)
+DATA = R.json()
+
+#print(DATA)
+
+
+
+r1 = re.findall(r'.*([1-3][0-9]{3})',DATA)
+print(r1)
