@@ -5,7 +5,7 @@ import requests
 findme = input("Enter a name to get their DOB: ")
 print("Currently searching for",findme)
 
-import requests
+
 
 S = requests.Session()
 
