@@ -39,11 +39,19 @@ PARAMS = {
 }
 
 R = S.get(url=URL, params=PARAMS)
+
+print(type(R))
+
 DATA = R.json()
 
 #print(DATA)
 
+print(type(DATA))
 
 
-r1 = re.findall(r'.*([1-3][0-9]{3})',DATA)
-print(r1)
+
+
+
+
+#r1 = re.findall(r'.*([1-3][0-9]{3})',DATA)
+#print(r1) 
