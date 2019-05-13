@@ -48,10 +48,21 @@ DATA = R.json()
 
 print(type(DATA))
 
+somecontent = json.dumps(DATA)
+
+print(type(somecontent))
 
 
 
 
 
-#r1 = re.findall(r'.*([1-3][0-9]{3})',DATA)
+
+#r1 = re.findall(r".*([1-3][0-9]{3})",somecontent)
 #print(r1) 
+
+#for l in somecontent:
+#    match = re.match(r'.*([1-3][0-9]{3})', l)
+#    if match is not None:
+#        # Then it found a match!
+#        print (match.group(1))
+
